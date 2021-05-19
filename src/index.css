@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding-right: 2%;
+}
+
+.navbar ul{
+  display: flex;
+  flex-grow: 1;
+}
+
+.navbar li{
+  list-style: none;
+  padding: 5px 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar li:nth-of-type(3){
+  margin-left: auto;
+}
+
+.navbar li:nth-of-type(2){
+  text-transform: uppercase;
+  color: #330B86;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+}
+
+.navbar li:nth-of-type(1) img{
+  height: 30px;
+  width: 30px;
+}
+
+.navbar li:nth-of-type(3) div{
+  background-color:#C5CEE0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.icon{
+  height: 40px;
+}
+
+.sidenav{
+  background-color: #FCFBFF;
+  width: 310px;
+  height: 89.5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav ul{
+  padding: 0;
+}
+
+.not-active{
+  list-style: none;
+  font-size: 20px;
+  color: grey;
+  padding: 6% 4%;
+  margin-left:5px;
+  max-height: 58px;
+}
+
+.icon-project{
+  margin-right: 10px;
+}
+
+.active{
+  font-weight: bold;
+  list-style: none;
+  font-size: 20px;
+  padding: 6% 2%;
+  margin-left:5px;
+  max-height: 58px;
+  box-sizing: border-box;
+  background-color:  #E1D8F1;
+  border-left: 7px solid #673AB7;
+  color: #673AB7;
+}
+
+.main-body{
+  display: flex;
+}
+
+.main-body-list{
+  position: relative;
+  display: flex;
+  width: 80vw;
+}
+
+.main-body ul li{
+  list-style: none;
+}
+
+.li-not-active{
+  position: relative;
+  list-style: none;
+  color: grey;
+  margin: 0px 40px;
+  font-size: 16px;
+}
+
+.wifi{
+  position: absolute;
+  left: -30px;
+  transform: rotate(45deg);
+}
+
+.box{
+  position: absolute;
+  left: -30px;
+  transform: rotate(90deg);
+}
+
+.li-active{
+  position: relative;
+  list-style: none;
+  margin: 0px 40px;
+  font-size: 16px;
+  color: #673AB7;
+  border-bottom: #330B86 solid 2px;
+}
+
+.right{
+  position: absolute;
+  right: 190px;
+}
+
+.right-1{
+  position: absolute;
+  right: 0px;
+}
+
+.mid-section{
+  margin: auto;
+  width: 75%;
+}
+
+.access-level{
+  border-radius: 30px;
+  width: 150px;
+  padding: 1%;
+}
+
+.delete-edit{
+  display: flex;
+}
+.delete-edit1{
+  display: flex;
+  position: relative;
+}
+
+.delete-edit li{
+  margin-right:  20px;
+}
+
+.delete-edit1 li{
+  margin-right:  20px;
+}
+
+
+.button{
+  background-color: #673AB7;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 150px;
+  position: relative;
+  padding: 3%;
+}
+
+.plus{
+  position: absolute;
+  left:10px;
+  top:2px;
+}
+.plus1{
+  position: absolute;
+ bottom: 6px;
+ left: 0;
+}
+
+.table-head{
+  background-color: #F2F2F2;
+}
+
+.links{
+  text-decoration: none;
+}
+
+.extra{
+  position: relative;
+  background-color: #FCFBFF;
+  padding: 5%;
+  height:260px
+}
+
+.extra-h5{
+  top:0px;
+  position: absolute;
+  right:600px;
+  width:300px;
+  font-weight: 100;
+}
+
+.access{
+  position: absolute;
+  top:40px;
+  right:480px;
+  width:300px;
+  font-weight: 200;
+  font-size:18px;
+}
+
+.extra hr{
+  position:absolute;
+  transform: rotate(90deg);
+  width:160px;
+  right:400px;
+  top:160px;
+}
+
+.checking-list{
+  position:absolute;
+  width:300px;
+  right:200px;
+  top:70px;
+}
+
+.checking-list ul li{
+  font-size:15px;
+}
+
+.first-list{
+  position:absolute;
+  width:400px;
+  right:400px;
+  top:100px;
+}
+
+.first-list ul li{
+  display:flex;
+  margin-bottom:20px;
+}
+
+.circle-checked{
+  
+  box-sizing:border-box;
+  width:15px;
+  height:15px;
+  background-color:#673AB7;
+  border-radius:50%;
+  margin-right:30px;
+}
+
+.for-circle{
+  position:absolute;
+  right:370px;
+  box-sizing:border-box;
+  width:19px;
+  height:19px;
+  border:1px solid  #673AB7;
+  border-radius:50%;
+  padding:1px;
+}
+
+.span1{
+  position:absolute;
+  top:35px;
+  right:200px;
+  color:grey;
+  font-size:14px;
+}
+
+.span2{
+  position:absolute;
+  top:95px;
+  right:200px;
+  color:grey;
+  font-size:14px;
+}
+
+.heading-table{
+  background-color:#F2F2F2;
+}
