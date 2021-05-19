@@ -12,6 +12,10 @@ import {Link} from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Checkbox from '@material-ui/core/Checkbox';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+import { withStyles } from '@material-ui/core/styles';
 
 
 
@@ -76,6 +80,7 @@ const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
     setChecked(event.target.checked);
   };
 
+  
 
   return (
     <>
@@ -151,6 +156,85 @@ const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
 export default function ManagerTable() {
   const classes = useStyles();
 
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+    checkedC: true,
+  });
+
+  const handleChange1 = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+  const handleChange2 = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const handleChange3 = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const handleChange4 = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const handleChange5 = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+
+  const IOSSwitch = withStyles((theme) => ({
+    root: {
+      width: 42,
+      height: 26,
+      padding: 0,
+      margin: theme.spacing(1),
+    },
+    switchBase: {
+      padding: 1,
+      '&$checked': {
+        transform: 'translateX(16px)',
+        color: theme.palette.common.white,
+        '& + $track': {
+          backgroundColor: '#52d869',
+          opacity: 1,
+          border: 'none',
+        },
+      },
+      '&$focusVisible $thumb': {
+        color: '#52d869',
+        border: '6px solid #fff',
+      },
+    },
+    thumb: {
+      width: 24,
+      height: 24,
+    },
+    track: {
+      borderRadius: 26 / 2,
+      border: `1px solid ${theme.palette.grey[400]}`,
+      backgroundColor: theme.palette.grey[50],
+      opacity: 1,
+      transition: theme.transitions.create(['background-color', 'border']),
+    },
+    checked: {},
+    focusVisible: {},
+  }))(({ classes, ...props }) => {
+    return (
+      <Switch
+        focusVisibleClassName={classes.focusVisible}
+        disableRipple
+        classes={{
+          root: classes.root,
+          switchBase: classes.switchBase,
+          thumb: classes.thumb,
+          track: classes.track,
+          checked: classes.checked,
+        }}
+        {...props}
+      />
+    );
+  });
+
 
   
 
@@ -192,10 +276,17 @@ export default function ManagerTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="center" > <p style={ row.calories === "All Access"  ? { backgroundColor:"#80ffbf", color:"#27AE60",border: "2px solid green" ,padding:"1%", borderRadius:"50px"} : { backgroundColor:" #ff9999", color:"#FF0808",border: "2px solid red" ,padding:"1%", borderRadius:"50px"}}>{row.calories}</p></TableCell>
+              <TableCell align="center" > <p style={ row.calories === "No Access" ? { backgroundColor:" #fff", color:"#F2F2F2",border: "2px solid #F2F2F2" ,padding:"1%", borderRadius:"50px"} :row.calories === "All Access"  ? { backgroundColor:"#80ffbf", color:"#27AE60",border: "2px solid green" ,padding:"1%", borderRadius:"50px"} : { backgroundColor:" #ff9999", color:"#FF0808",border: "2px solid red" ,padding:"1%", borderRadius:"50px"} }>{row.calories}</p></TableCell>
               <TableCell align="center">{row.fat}</TableCell>
               <TableCell align="center">{row.carbs}</TableCell>
-              <TableCell align="center">button</TableCell>
+              <TableCell align="center"><FormGroup>
+              { row.calories=== "No Access" ? <FormControlLabel
+        control={<IOSSwitch onChange={handleChange1} name="checkedB" />}
+      />: <FormControlLabel
+        control={<IOSSwitch checked={state.checkedB} onChange={handleChange1} name="checkedB" />}
+      /> }
+      
+    </FormGroup></TableCell>
             </ExpandableTableRow>
           ))}
         </TableBody>

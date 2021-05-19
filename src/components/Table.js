@@ -9,7 +9,10 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { AiOutlineEye } from 'react-icons/ai';
 import {Link} from 'react-router-dom';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
+import Checkbox from '@material-ui/core/Checkbox';
+import Radio from '@material-ui/core/Radio';
+
+
 
 
 const useStyles = makeStyles({
@@ -37,9 +40,13 @@ const rows = [
 ];
 
 
+
+
 export default function BasicTable() {
   const classes = useStyles();
+  
 
+  
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -55,7 +62,11 @@ export default function BasicTable() {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>
-            <TableCell   component="th" scope="row" className="icon-wrapper">O  
+            <TableCell   component="th" scope="row" className="icon-wrapper"><Radio
+         value="a"
+         name="radio-button-demo"
+         aria-label="A"
+       />  
             <Link className="links" to="/Manager"> {row.name}</Link>
               </TableCell>
               <TableCell  align="center"><p className="access-level" style={ row.level === "All Access"  ? { backgroundColor:"#80ffbf", color:"#27AE60",border: "2px solid green"} : { backgroundColor:" #ff9999", color:"#FF0808",border: "2px solid red"}}>{row.level}</p></TableCell>
