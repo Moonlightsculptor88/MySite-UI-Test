@@ -55,7 +55,7 @@ export default function BasicTable() {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>
-            <TableCell   component="th" scope="row" className="icon-wrapper"><AiOutlinePlusCircle className="plus-icon" size="1.5em"  /> 
+            <TableCell   component="th" scope="row" className="icon-wrapper">O  
             <Link className="links" to="/Manager"> {row.name}</Link>
               </TableCell>
               <TableCell  align="center"><p className="access-level" style={ row.level === "All Access"  ? { backgroundColor:"#80ffbf", color:"#27AE60",border: "2px solid green"} : { backgroundColor:" #ff9999", color:"#FF0808",border: "2px solid red"}}>{row.level}</p></TableCell>

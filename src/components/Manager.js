@@ -159,8 +159,9 @@ export default function ManagerTable() {
     <div className="mid-section">
     <ul className="delete-edit1">
          <Link to="/" > <li> <BsArrowLeft className="plus1" size="1.5em" />
-          Management Team
+          
      </li></Link>
+     <li className="management">Management Team</li>
           <li><FiEdit2 size="1.2em" /></li>
         </ul>
         <ul className="main-body-list">

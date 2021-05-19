@@ -188,7 +188,7 @@ body {
 }
 .plus1{
   position: absolute;
- bottom: 6px;
+ bottom: 3px;
  left: 0;
 }
 
@@ -294,4 +294,9 @@ body {
 
 .heading-table{
   background-color:#F2F2F2;
+}
+
+.management{
+  font-size: large;
+  color: #673AB7;
 }
